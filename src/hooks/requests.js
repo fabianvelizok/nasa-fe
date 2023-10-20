@@ -1,6 +1,12 @@
+import { API_URL } from '../constants'
+
 async function httpGetPlanets() {
-  // TODO: Once API is ready.
-  // Load planets and return as JSON.
+  try {
+    const response = await fetch(`${API_URL}/planets`)
+    return response.json()
+  } catch (e) {
+    console.error('Error getting planets!')
+  }
 }
 
 async function httpGetLaunches() {
