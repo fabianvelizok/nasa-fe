@@ -11,7 +11,7 @@ async function httpGetPlanets() {
 
 async function httpGetLaunches() {
   try {
-    const response = await fetch(`${API_URL}/launches?sortByFlightNumber=true`)
+    const response = await fetch(`${API_URL}/launches`)
     return response.json()
   } catch (e) {
     console.error('Error getting launches!')
